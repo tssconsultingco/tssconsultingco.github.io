@@ -3,6 +3,117 @@ h2 { font-family: sans-serif; font-size: 2.5rem; }
 
 p { font-family: 'Open Sans', sans-serif; }
 
+.scroll {
+    color: #fff;
+    position: fixed;
+    bottom: 2.5rem;
+    width: 100%;
+    left: 0;
+    opacity: 1;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+}
+.scroll.alt {
+    color: #000;
+}
+.scroll.bounce {
+    bottom: 1.75rem;
+}
+.scroll.hide {
+    opacity: 0;
+}
+
+.menu {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    width: 2rem;
+    cursor: pointer;
+    z-index: 10;
+}
+.menu:before {
+    content: "MENU";
+    color: #fff;
+    position: absolute;
+    right: 3rem;
+    font-size: 1rem;
+    opacity: 0;
+    transition: all 0.3s;
+}
+.menu.active:before {
+    content: "CLOSE";
+    color: #fff !important;
+}
+.menu.alt:before {
+    color: #333;
+}
+.menu:hover:before {
+    opacity: 1;
+}
+.menu .bar {
+    background: #fff;
+    border-radius: 2px;
+    height: 4px;
+    margin-bottom: 6px;
+    transition: all 0.3s;
+}
+.menu.active .bar {
+    background: #fff !important;
+}
+.menu.active .bar:nth-of-type(1) {
+    transform: rotate(42deg);
+    transform-origin: top left;
+}
+.menu.active .bar:nth-of-type(2) { opacity: 0; }
+.menu.active .bar:nth-of-type(3) {
+    transform: rotate(-42deg);
+    transform-origin: bottom left;
+}
+
+.menu.alt .bar {
+    background: #333;
+}
+
+.takeover {
+    background: url("../img/hero-home.jpg") center center no-repeat;
+    background-size: cover;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0; left: 0;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 2;
+    transition: all 0.3s;
+}
+.takeover.active {
+    opacity: 1;
+    visibility: visible;
+}
+.takeover div {
+    width: 100vw;
+}
+.takeover div a {
+    color: #535c75;
+    display: block;
+    font-size: 4rem;
+    text-align: center;
+    text-decoration: none;
+    width: 100vw;
+    transition: all 0.3s;
+}
+.takeover div a:hover {
+    color: #fff;
+}
+.takeover div a:hover:after {
+    content: " \BB";
+    color: #f47821;
+}
+
 header {
     position: absolute;
     height: 100px;
@@ -14,22 +125,20 @@ header {
         header .container img { display: block; height: 100%; }
 
 #hero {
+    background: url("../img/hero-home.jpg") center center no-repeat;
+    background-size: cover;
     display: flex;
     align-items: center;
     height: 100vh; }
-    #home #hero {
-        background: url("../img/hero-home.jpg") center center no-repeat;
-        background-size: cover;
-    }
 
     #hero > div { display: flex; align-items: center; }
 
     #hero .logo { width: 360px; padding-right: 60px; }
     #hero .hr { background: rgba(255,255,255,0.2); display: block; height: 70vh; width: 2px; margin: 0 9px; }
     #hero .headline { width: calc(100% - 380px); padding-left: 60px; }
-        #hero .headline h1 { color: #535c75; font-size: 2.5rem; }
+        #hero .headline h1 { color: #535c75; font-size: 3rem; }
         #hero .headline p { color: #fff; font-size: 1rem; }
-        #hero .headline .hr { width: calc(100% + 60px ); height: 2px; margin: 3rem 0 3rem -69px; }
+        #hero .headline .hr { width: calc(100% + 60px ); height: 2px; margin: 2rem 0 2rem -69px; }
 
         #hero .headline a { color: #f47821; display: inline-block; margin-right: 1.25rem; transition: all 0.25s; text-shadow: 5px 5px 5px #0f2542; }
         #hero .headline a:hover { color: #fff; }
@@ -110,4 +219,10 @@ footer span {
 }
 footer span:nth-of-type(1) {
     margin-left: 0;
+}
+footer a {
+    color: #fff;
+}
+footer a:hover {
+    color: #0f2542;
 }
