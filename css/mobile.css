@@ -54,6 +54,37 @@ section .container div.hr, section .container-fluid div.hr {
     padding: 2rem; 
     width: 100%; }
 
+#consulting {
+    background: url("../img/consulting.jpg") center center no-repeat; background-size: cover;
+}
+#consulting .container-fluid > div:nth-of-type(1) { 
+    background: rgba(244,120,33,0.9325);
+    display: block;
+    padding: 2rem; 
+    width: 100%; }
+#consulting .container-fluid > div:nth-of-type(2) {
+    display: none;
+}
+
+#portfolio {
+    background: url("../img/portfolio.jpg") center center no-repeat; background-size: cover;
+}
+#portfolio .container-fluid > div:nth-of-type(1) { 
+    background: rgba(15,37,66,0.9325);
+    display: block;
+    padding: 2rem; 
+    width: 100%; }
+#portfolio .container-fluid > div:nth-of-type(2) {
+    display: none;
+}
+
+#talk-to-us { height: auto; }
+#talk-to-us .hr { margin: 2rem 0 1rem 0; }
+#talk-to-us .container > div { width: auto; margin: 0 auto; padding: 0; }
+#talk-to-us .col-md-10 { padding: 0; }
+
+#talk-to-us a { background: #0f2542; color: #fff; margin: 1rem 0; }
+
 footer {
     height: auto;
     text-align: center;

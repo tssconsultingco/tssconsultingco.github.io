@@ -8,23 +8,48 @@ $(function() {
         }
     }
         
-    $("#hero a, .takeover a").on("click", function(e) {
+    $("[data-section]").on("click", function(e) {
         e.preventDefault();
         if ($(".menu").hasClass("active")) {
             $(".menu").trigger("click");
         }
+
+        if ($(this).parents(".case-study").length) {
+            $(".case-study").animate({ opacity: "0" }, 250, function() {
+                $(".case-study").scrollTop(0).css("opacity","1").css("display","none");
+            });
+            $("body").removeClass("freeze");
+        } 
+
         $("html,body").animate({ scrollTop: $("#"+$(this).data("section")).offset().top });
+    });
+
+    $("#portfolio h4 a").on("click", function(e) {
+        e.preventDefault();
+
+        $($(this).data("modal")).fadeIn();
+        $("body").addClass("freeze");
+    });
+    $(".case-study a.close-window").on("click", function(e) {
+        e.preventDefault();
+
+        $(".case-study").animate({ opacity: "0" }, 250, function() {
+            $(".case-study").scrollTop(0).css("opacity","1").css("display","none");
+        });
+        $("body").removeClass("freeze");
     });
 
     $(".menu").on("click", function(e) {
         e.preventDefault();
         $(".takeover").toggleClass("active");
         $(".menu").toggleClass("active");
+        $("body").toggleClass("freeze");
     });
     $(".menu.active").on("click", function(e) {
         e.preventDefault();
         $(".takeover").removeClass("active");
         $(".menu").removeClass("active");
+        $("body").removeClass("freeze");
     });
 
     var stallTime = 0;
