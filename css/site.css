@@ -231,6 +231,70 @@ footer a:hover {
     color: #0f2542;
 }
 
+.faq {
+    background: url("../img/faq.jpg") center center no-repeat;
+    background-size: cover;
+    display: none;
+    overflow-y: scroll;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    top: 0; left: 0;
+    z-index: 100; 
+}
+.faq > a {
+    color: #fff;
+    font-size: 4rem;
+    line-height: 0;
+    position: fixed;
+    z-index: 4;
+    top: 3rem;
+    right: 2rem;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+.faq a:hover {
+    color: #f47821;
+}
+    .faq .container {
+        overflow-x: hidden;
+    }
+    .faq .container a {
+        color: #fff;
+        transition: all 0.3s;
+    }
+    .faq .container a:hover {
+        color: #f47821;
+    }
+    .faq .container h2 {
+        color: #fff;
+        font-size: 5rem;
+        font-weight: 300;
+        line-height: 1;
+        margin-bottom: 0; }
+        .faq .container h2 span {
+            color: #535c75;
+            display: block;
+            font-weight: 800;
+            font-size: 1.5rem;
+            line-height: 1;
+            text-transform: uppercase;
+        }
+        
+    .faq .container .hr {
+        background: #535c75; display: block; width: calc(100% + 2rem); height: 2px; margin: 2rem -1rem; }
+
+    .faq p, .faq li {
+        color: #fff; }
+        .faq p strong {
+            color: #f47821;
+            display: block;
+            font-size: 1.5rem;
+        }
+    .faq p:not(:last-child) { margin: 4rem 0; }
+    .faq p+ul { margin-top: -3rem; }
 
 .case-study {
     display: none;

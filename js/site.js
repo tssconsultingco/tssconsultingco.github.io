@@ -24,6 +24,21 @@ $(function() {
         $("html,body").animate({ scrollTop: $("#"+$(this).data("section")).offset().top });
     });
 
+    $(".faq-link").on("click", function(e) {
+        e.preventDefault();
+
+        $($(this).attr("href")).fadeIn();
+        $("body").addClass("freeze");
+    });
+    $(".faq a.close-window").on("click", function(e) {
+        e.preventDefault();
+
+        $(".faq").animate({ opacity: "0" }, 250, function() {
+            $(".faq").scrollTop(0).css("opacity","1").css("display","none");
+        });
+        $("body").removeClass("freeze");
+    });
+
     $("#portfolio h4 a").on("click", function(e) {
         e.preventDefault();
 
