@@ -8,7 +8,8 @@ h2 { font-size: 1.5rem; }
     #hero .logo { width: 70%; margin: 0 auto; padding-right: 0; }
     #hero .hr { height: 2px; width: 100%; margin: 1.5rem auto; }
     #hero .headline { width: 100%; padding-left: 0; }
-        #hero .headline h1 { font-size: 2rem; }
+        #hero .headline h1 { font-size: 1.8rem; text-align: center; }
+        #hero .headline p { text-align: center; }
         #hero .headline .hr,
         #hero .headline a {
             display: none;
@@ -28,6 +29,7 @@ section .container-fluid {
 section .container div.hr, section .container-fluid div.hr {
     margin: 1rem 0;
 }
+section a.btn + a.btn { margin-left: 0; }
 
 #design {
     background: url("../img/design.jpg") center center no-repeat; background-size: cover;
@@ -94,6 +96,9 @@ footer img {
     margin: 2rem auto 0;
     width: 70%;
 }
-footer .col-md-4 {
+footer .col-lg-8 {
+    padding: 0 2rem;
+}
+footer .col-lg-4 {
     margin-top: 2rem;
-    text-align: center; }
+    text-align: center !important; }
