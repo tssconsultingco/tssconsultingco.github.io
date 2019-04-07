@@ -29,6 +29,7 @@ section .container-fluid {
 section .container div.hr, section .container-fluid div.hr {
     margin: 1rem 0;
 }
+section a.btn { width: 100% !important; }
 section a.btn + a.btn { margin-left: 0; }
 
 #design {

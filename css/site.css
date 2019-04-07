@@ -204,6 +204,10 @@ section a.btn + a.btn { margin-left: 2rem; }
 #design .container-fluid > div:nth-of-type(2) { background: url("../img/design.jpg") center center no-repeat; height: 100%; width: calc(40% - 15px); margin-left: 15px; }
 #design a.btn { background: #fff; color: #535c75; }
 
+@media screen and (max-width: 1199px) {
+    #design a.btn + a.btn { display: block; margin-left: 0; margin-top: 1rem; width: 224px; }
+}
+
 @media screen and (min-width: 768px) and (max-width: 991px) {
     #design .container-fluid {
         background: url("../img/design.jpg") center center no-repeat;
@@ -220,6 +224,10 @@ section a.btn + a.btn { margin-left: 2rem; }
 #web-development .container-fluid > div:nth-of-type(1) { background: url("../img/web-development.jpg") center center no-repeat; background-size: cover; height: 100%; width: calc(40% - 15px); margin-right: 15px; }
 #web-development .container-fluid > div:nth-of-type(2) { background: rgba(33,33,33,0.2); color: #0f2542; display: flex; align-items: center; height: 100%; width: calc(60% - 15px); margin-left: 15px; padding: 0 5rem;}
 #web-development a.btn { background: #0f2542; color: #fff; }
+
+@media screen and (max-width: 1199px) {
+    #web-development a.btn + a.btn { display: block; margin-left: 0; margin-top: 1rem; width: 224px; }
+}
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
     #web-development .container-fluid {
