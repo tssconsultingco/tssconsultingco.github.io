@@ -205,7 +205,7 @@ section a.btn + a.btn { margin-left: 2rem; }
 #design a.btn { background: #fff; color: #535c75; }
 
 @media screen and (max-width: 1199px) {
-    #design a.btn + a.btn { display: block; margin-left: 0; margin-top: 1rem; width: 224px; }
+    #design a.btn + a.btn { display: block; margin-left: 0; margin-top: 1rem; width: 244px; }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
