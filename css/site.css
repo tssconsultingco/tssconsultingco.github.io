@@ -336,7 +336,7 @@ footer a:hover {
     footer span { margin-top: 1rem; }
 }
 
-.faq {
+.faq, .event {
     background: url("../img/faq.jpg") center center no-repeat;
     background-size: cover;
     display: none;
@@ -349,7 +349,12 @@ footer a:hover {
     top: 0; left: 0;
     z-index: 100; 
 }
-.faq > a {
+.event {
+    background: url("../img/events.jpg") center center no-repeat;
+    background-size: cover;
+}
+.faq > a,
+.event > a {
     color: #fff;
     font-size: 4rem;
     line-height: 0;
@@ -360,26 +365,32 @@ footer a:hover {
     text-decoration: none;
     transition: all 0.3s;
 }
-.faq a:hover {
+.faq a:hover,
+.event a:hover {
     color: #f47821;
 }
-    .faq .container {
+    .faq .container,
+    .event .container {
         overflow-x: hidden;
     }
-    .faq .container a {
+    .faq .container a,
+    .event .container a {
         color: #fff;
         transition: all 0.3s;
     }
-    .faq .container a:hover {
+    .faq .container a:hover,
+    .event .container a:hover {
         color: #f47821;
     }
-    .faq .container h2 {
+    .faq .container h2,
+    .event .container h2 {
         color: #fff;
         font-size: 5rem;
         font-weight: 300;
         line-height: 1;
         margin-bottom: 0; }
-        .faq .container h2 span {
+        .faq .container h2 span,
+        .event .container h2 span {
             color: #535c75;
             display: block;
             font-weight: 800;
@@ -387,19 +398,34 @@ footer a:hover {
             line-height: 1;
             text-transform: uppercase;
         }
+        .event .container h2 span {
+            color: #0f2542;
+        }
         
-    .faq .container .hr {
+    .faq .container .hr,
+    .event .container .hr {
         background: #535c75; display: block; width: calc(100% + 2rem); height: 2px; margin: 2rem -1rem; }
+    .event .container .hr {
+        background: #0f2542;
+    }
 
-    .faq p, .faq li {
+    .faq p, .faq li,
+    .event p {
         color: #fff; }
         .faq p strong {
             color: #f47821;
             display: block;
             font-size: 1.5rem;
         }
-    .faq p:not(:last-child) { margin: 4rem 0; }
+    .faq p:not(:last-child),
+    .event p:not(:last-child) { margin: 4rem 0; }
     .faq p+ul { margin-top: -3rem; }
+
+    .event h4 {
+        color: #f47821;
+        font-size: 1.5rem;
+        margin-top: 1rem;
+    }
 
 .case-study {
     background:rgba(255,255,255,0.98);

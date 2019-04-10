@@ -39,6 +39,21 @@ $(function() {
         $("body").removeClass("freeze");
     });
 
+    $(".event-link").on("click", function(e) {
+        e.preventDefault();
+
+        $($(this).attr("href")).fadeIn();
+        $("body").addClass("freeze");
+    });
+    $(".event a.close-window").on("click", function(e) {
+        e.preventDefault();
+
+        $(".event").animate({ opacity: "0" }, 250, function() {
+            $(".event").scrollTop(0).css("opacity","1").css("display","none");
+        });
+        $("body").removeClass("freeze");
+    });
+
     $("#portfolio h4 a").on("click", function(e) {
         e.preventDefault();
 
