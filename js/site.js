@@ -21,6 +21,20 @@ $(function() {
             $("body").removeClass("freeze");
         } 
 
+        if ($(this).parents(".legal").length) {
+            $(".legal").animate({ opacity: "0" }, 250, function() {
+                $(".legal").scrollTop(0).css("opacity","1").css("display","none");
+            });
+            $("body").removeClass("freeze");
+        } 
+
+        if ($(this).parents(".faq").length) {
+            $(".faq").animate({ opacity: "0" }, 250, function() {
+                $(".faq").scrollTop(0).css("opacity","1").css("display","none");
+            });
+            $("body").removeClass("freeze");
+        } 
+
         $("html,body").animate({ scrollTop: $("#"+$(this).data("section")).offset().top });
     });
 
@@ -60,11 +74,27 @@ $(function() {
         $($(this).data("modal")).fadeIn();
         $("body").addClass("freeze");
     });
+
     $(".case-study a.close-window").on("click", function(e) {
         e.preventDefault();
 
         $(".case-study").animate({ opacity: "0" }, 250, function() {
             $(".case-study").scrollTop(0).css("opacity","1").css("display","none");
+        });
+        $("body").removeClass("freeze");
+    });
+
+    $(".legal-link").on("click", function(e) {
+        e.preventDefault();
+
+        $($(this).attr("href")).fadeIn();
+        $("body").addClass("freeze");
+    });
+    $(".legal a.close-window").on("click", function(e) {
+        e.preventDefault();
+
+        $(".legal").animate({ opacity: "0" }, 250, function() {
+            $(".legal").scrollTop(0).css("opacity","1").css("display","none");
         });
         $("body").removeClass("freeze");
     });

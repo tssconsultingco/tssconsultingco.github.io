@@ -85,7 +85,7 @@ section a.btn + a.btn { margin-left: 0; }
     display: none;
 }
 
-#talk-to-us { height: auto; }
+#talk-to-us { height: auto; min-height: 0px; }
 #talk-to-us .hr { margin: 2rem 0 1rem 0; }
 #talk-to-us .container > div { width: auto; margin: 0 auto; padding: 0; }
 #talk-to-us .col-md-10 { padding: 0; }
@@ -106,4 +106,9 @@ footer .col-lg-8 {
 }
 footer .col-lg-4 {
     margin-top: 2rem;
+    margin-bottom: 2rem;
     text-align: center !important; }
+
+    footer a.social {
+        color: #0f2542;
+    }
