@@ -306,7 +306,7 @@ section a.btn + a.btn { margin-left: 2rem; }
     }
     #talk-to-us .hr { background: rgba(244,120,33,0.2); }
 
-    #talk-to-us a { border: 2px solid #0f2542; color: #0f2542; display: inline-block; padding: 0.5rem 1rem; text-decoration: none; width: 100%; font-size: 1.25rem; }
+    #talk-to-us a { border: 2px solid #0f2542; color: #0f2542; display: inline-block; padding: 0.5rem; text-decoration: none; width: 100%; font-size: 1.25rem; }
     #talk-to-us a:hover { background: #0f2542; color: #fff; }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
